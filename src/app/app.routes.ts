@@ -9,7 +9,10 @@ export const appRoutes: Route[] = [
     },
     {
         path: 'products',
-        // eslint-disable-next-line @nx/enforce-module-boundaries
         loadComponent: () => import('@ecommerce/products').then( c => c.ProductsComponent)
+    },
+    {
+        path: 'orders',
+        loadComponent: () => import('@ecommerce/orders').then( c => c.OrdersComponent)
     }
 ];
