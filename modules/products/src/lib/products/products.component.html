@@ -1,2 +1,7 @@
-<p>products works!</p>
-<ecommerce-shared-ui></ecommerce-shared-ui>
+<input type="search" name="search" [formControl]="control">
+
+<ul>
+    @for (product of products$ | async; track $index) {
+        <li> {{product.name}}</li>
+    }
+</ul>
